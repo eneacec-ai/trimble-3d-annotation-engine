@@ -2,7 +2,7 @@
   "url": "https://eneacec-ai.github.io/trimble-3d-annotation-engine/",
   "title": "3D Annotation Engine",
   "icon": "https://eneacec-ai.github.io/trimble-3d-annotation-engine/assets/icon.svg",
-  "infoUrl": "https://eneacec-ai.github.io/trimble-3d-annotation-engine/README.html",
+  "infoUrl": "https://eneacec-ai.github.io/trimble-3d-annotation-engine/index.html",
   "description": "3D text, native measurement and annotation tools for Trimble Connect 3D Viewer.",
   "extensionType": [
     "3dviewer"
