@@ -1,0 +1,15 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3D Annotation Engine</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><div><b>3D Annotation Engine</b><small>v0.1.0 • Trimble Connect 3D Viewer</small></div><span id="apiStatus">Verbinde…</span></header>
+<main>
+<section class="card"><label>Werkzeug</label><select id="toolType"><option value="text">3D Text</option><option value="dimension">Native Bemaßung</option><option value="dim3d">3D Bemaßung</option></select></section>
+<section id="textPanel" class="card"><h2>3D Text</h2><label>Text</label><textarea id="textValue" rows="3">STÜTZE S1</textarea><div class="grid"><div><label>Farbe</label><input id="textColor" type="color" value="#ff9900"></div><div><label>Orientierung</label><select id="orientation"><option value="camera">Kamera</option><option value="world">Welt</option><option value="surface">Fläche</option></select></div></div><p class="note">Die aktuelle Workspace-API exponiert für TextMarkup Text, Farbe und Picks; Font, Texthöhe, Bold, Italic und Extrusion sind dort nicht vorhanden.</p><button id="startText">Punkt wählen</button></section>
+<section id="dimensionPanel" class="card hidden"><h2>Native Bemaßung</h2><p class="hint">Punkt 1 → Punkt 2 → Position der Maßlinie.</p><label>Text-Override</label><input id="dimensionOverride" placeholder="z. B. 2.450 mm"><label>Farbe</label><input id="dimensionColor" type="color" value="#000000"><button id="startDimension">Bemaßung starten</button></section>
+<section id="dim3dPanel" class="card hidden"><h2>3D Bemaßung</h2><p class="hint">Punkt 1 → Punkt 2 → Offset. Die Darstellung wird aus nativen Trimble-Markups aufgebaut.</p><div class="grid"><div><label>Farbe</label><input id="dim3dColor" type="color" value="#ff9900"></div><div><label>Einheit</label><select id="dim3dUnit"><option value="mm">mm</option><option value="cm">cm</option><option value="m">m</option></select></div></div><label>Dezimalstellen</label><input id="dim3dDecimals" type="number" min="0" max="4" value="0"><button id="startDim3d">3D-Bemaßung starten</button></section>
+<section class="card"><h2>Bauteil</h2><pre id="selectionInfo">Kein Bauteil ausgewählt.</pre><button id="readSelection" class="secondary">Auswahl auslesen</button></section>
+<section class="card"><h2>Stempel</h2><label>Vorlage</label><textarea id="template" rows="5">{Type}
+{Position}
+{System}
+{DN}
+{Length}</textarea><button id="stampSelection">Stempel auf ausgewähltes Bauteil</button><p class="note">v0.1 liest Property Sets des aktuell ausgewählten Objekts und ersetzt Platzhalter anhand der Originalnamen.</p></section>
+<section class="card"><div class="row"><h2>Markups</h2><button id="clearMarkups" class="danger">Alle löschen</button></div><div id="log"></div></section>
+</main><script src="https://components.connect.trimble.com/trimble-connect-workspace-api/index.js"></script><script src="js/app.js"></script></body></html>

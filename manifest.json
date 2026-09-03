@@ -1,0 +1,10 @@
+{
+  "url": "https://YOUR-USERNAME.github.io/trimble-3d-annotation-engine/",
+  "title": "3D Annotation Engine",
+  "icon": "https://YOUR-USERNAME.github.io/trimble-3d-annotation-engine/assets/icon.svg",
+  "infoUrl": "https://YOUR-USERNAME.github.io/trimble-3d-annotation-engine/README.html",
+  "description": "3D text, native measurement and annotation tools for Trimble Connect 3D Viewer.",
+  "extensionType": [
+    "3dviewer"
+  ]
+}
